@@ -74,7 +74,7 @@ export default function GovUkSignInProvider<P extends GovUkSignInProfile>(
       client_id: options.clientId,
       token_endpoint_auth_method: "private_key_jwt",
       token_endpoint_auth_signing_alg: "PS256",
-      id_token_signed_response_alg: "ES256",
+      id_token_signed_response_alg: "RS256",
     },
     jwks: { keys: [parseJwk(options.privateKey)] },
   }
